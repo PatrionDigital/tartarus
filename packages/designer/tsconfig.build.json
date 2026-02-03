@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "declarationMap": true,
+    "composite": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"],
+  "references": [
+    { "path": "../core/tsconfig.build.json" },
+    { "path": "../combat/tsconfig.build.json" },
+    { "path": "../ai/tsconfig.build.json" },
+    { "path": "../waves/tsconfig.build.json" }
+  ]
+}

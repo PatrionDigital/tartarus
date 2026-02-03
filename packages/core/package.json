@@ -1,0 +1,31 @@
+{
+  "name": "@tartarus/core",
+  "version": "0.1.0",
+  "description": "Core engine: game loop, ECS, scenes, input, camera, rendering, leveling, pickups",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "miniplex": "^2.0.0",
+    "pixi.js": "^8.6.0",
+    "yuka": "^0.7.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.0",
+    "happy-dom": "^20.4.0"
+  }
+}

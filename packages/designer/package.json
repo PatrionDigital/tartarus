@@ -1,0 +1,43 @@
+{
+  "name": "@tartarus/designer",
+  "version": "0.1.0",
+  "description": "Designer tools: enemy, wave, weapon, and upgrade editors",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest",
+    "test:run": "echo No tests yet",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@tartarus/ai": "workspace:*",
+    "@tartarus/combat": "workspace:*",
+    "@tartarus/core": "workspace:*",
+    "@tartarus/waves": "workspace:*",
+    "pixi.js": "^8.6.0",
+    "yuka": "^0.7.8"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "react": "^18.3.1",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.0",
+    "zustand": "^5.0.11"
+  }
+}

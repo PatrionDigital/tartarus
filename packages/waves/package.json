@@ -1,0 +1,26 @@
+{
+  "name": "@tartarus/waves",
+  "version": "0.1.0",
+  "description": "Wave system: wave manager, event system, spawn patterns",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.0"
+  }
+}

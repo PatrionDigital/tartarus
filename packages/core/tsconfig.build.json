@@ -8,5 +8,5 @@
     "composite": true
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["src/**/*.test.ts", "src/scenes/GameScene.ts"]
+  "exclude": ["src/**/*.test.ts", "src/scenes/GameScene.ts", "src/_survivor_specific/**"]
 }

@@ -69,7 +69,9 @@ export { pickupAttractionSystem } from "./pickups/PickupAttractionSystem";
 export { pickupCollectionSystem } from "./pickups/PickupCollectionSystem";
 export type { CollectionResult } from "./pickups/PickupCollectionSystem";
 
-// Reference Scenes (for examples / getting started)
+// Scenes
 export { MenuScene } from "./scenes/MenuScene";
+export { SkeletonGameScene } from "./scenes/SkeletonGameScene";
+export type { GridConfig, PlayerConfig } from "./scenes/SkeletonGameScene";
 export { ResultScene } from "./scenes/ResultScene";
 export type { GameResults } from "./scenes/ResultScene";

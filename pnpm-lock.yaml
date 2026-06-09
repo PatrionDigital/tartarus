@@ -21,7 +21,7 @@ importers:
         specifier: workspace:*
         version: link:../core
       pixi.js:
-        specifier: ^8.6.0
+        specifier: ^8.7.0
         version: 8.15.0
       yuka:
         specifier: ^0.7.8
@@ -43,7 +43,7 @@ importers:
         specifier: workspace:*
         version: link:../core
       pixi.js:
-        specifier: ^8.6.0
+        specifier: ^8.7.0
         version: 8.15.0
     devDependencies:
       happy-dom:
@@ -65,7 +65,7 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
       pixi.js:
-        specifier: ^8.6.0
+        specifier: ^8.7.0
         version: 8.15.0
       yuka:
         specifier: ^0.7.8
@@ -96,7 +96,7 @@ importers:
         specifier: workspace:*
         version: link:../waves
       pixi.js:
-        specifier: ^8.6.0
+        specifier: ^8.7.0
         version: 8.15.0
       yuka:
         specifier: ^0.7.8
@@ -503,6 +503,7 @@ packages:
   '@xmldom/xmldom@0.8.11':
     resolution: {integrity: sha512-cQzWCtO6C8TQiYl1ruKNn2U6Ao4o4WBBcbL61yJl84x+j5sOWWFU9X7DpND8XZG3daDppSsigMdfAIl2upQBRw==}
     engines: {node: '>=10.0.0'}
+    deprecated: this version has critical issues, please update to the latest version
 
   assertion-error@2.0.1:
     resolution: {integrity: sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==}

@@ -155,6 +155,25 @@ importers:
         specifier: ^2.1.0
         version: 2.1.9(@types/node@25.2.0)(happy-dom@20.5.0)
 
+  packages/tilemap:
+    dependencies:
+      '@pixi/tilemap':
+        specifier: ^5.0.2
+        version: 5.0.2(pixi.js@8.15.0)
+      pixi.js:
+        specifier: ^8.7.0
+        version: 8.15.0
+    devDependencies:
+      happy-dom:
+        specifier: ^20.4.0
+        version: 20.5.0
+      typescript:
+        specifier: ^5.7.3
+        version: 5.9.3
+      vitest:
+        specifier: ^2.1.0
+        version: 2.1.9(@types/node@25.2.0)(happy-dom@20.5.0)
+
   packages/waves:
     devDependencies:
       typescript:
@@ -318,6 +337,11 @@ packages:
 
   '@pixi/colord@2.9.6':
     resolution: {integrity: sha512-nezytU2pw587fQstUu1AsJZDVEynjskwOL+kibwcdxsMBFqPsFFNA7xl0ii/gXuDi6M0xj3mfRJj8pBSc2jCfA==}
+
+  '@pixi/tilemap@5.0.2':
+    resolution: {integrity: sha512-J+K1eU7uB58WPVD33d7usXrhKA03IGq3IfPvXBFr1027Bb9ScxrGhH0NomR9VpVVUPiHkK7FcTGuOtJMVGAv6A==}
+    peerDependencies:
+      pixi.js: '>=8.5.0'
 
   '@rollup/rollup-android-arm-eabi@4.57.1':
     resolution: {integrity: sha512-A6ehUVSiSaaliTxai040ZpZ2zTevHYbvu/lDoeAteHI8QnaosIzm4qwtezfRg1jOYaUmnzLX1AOD6Z+UJjtifg==}
@@ -898,6 +922,10 @@ snapshots:
       eventery: 0.0.4
 
   '@pixi/colord@2.9.6': {}
+
+  '@pixi/tilemap@5.0.2(pixi.js@8.15.0)':
+    dependencies:
+      pixi.js: 8.15.0
 
   '@rollup/rollup-android-arm-eabi@4.57.1':
     optional: true

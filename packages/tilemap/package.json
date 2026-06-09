@@ -1,0 +1,30 @@
+{
+  "name": "@tartarus/tilemap",
+  "version": "0.1.0",
+  "description": "Tile-map schema and runtime renderer (@pixi/tilemap) for Tartarus",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@pixi/tilemap": "^5.0.2",
+    "pixi.js": "^8.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.0",
+    "happy-dom": "^20.4.0"
+  }
+}

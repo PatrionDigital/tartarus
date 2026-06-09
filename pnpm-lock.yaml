@@ -120,6 +120,9 @@ importers:
 
   packages/editor:
     devDependencies:
+      '@tartarus/tilemap':
+        specifier: workspace:*
+        version: link:../tilemap
       '@types/react':
         specifier: ^18.3.0
         version: 18.3.27

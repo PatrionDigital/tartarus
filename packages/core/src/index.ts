@@ -51,6 +51,10 @@ export type { CameraPosition } from "./ecs/systems/RenderSystem";
 // Assets
 export { AssetLoader } from "./assets/AssetLoader";
 
+// Animation
+export { AnimationController } from "./animation/AnimationController";
+export type { AnimationClips, PlayOptions } from "./animation/AnimationController";
+
 // Leveling
 export {
   LevelingSystem,

@@ -1,4 +1,4 @@
-import type { Graphics } from "pixi.js";
+import type { Container } from "pixi.js";
 import type { Vehicle } from "yuka";
 
 // ─── Base Components ────────────────────────────────────────────────
@@ -36,10 +36,13 @@ export interface Invincibility {
 }
 
 /**
- * Sprite component - visual representation
+ * Sprite component - visual representation.
+ *
+ * Holds any PixiJS display object: Graphics, Sprite, or AnimatedSprite
+ * (all extend Container). RenderSystem syncs its position each frame.
  */
 export interface Sprite {
-  graphics: Graphics;
+  graphics: Container;
 }
 
 // ─── Combat Components ──────────────────────────────────────────────

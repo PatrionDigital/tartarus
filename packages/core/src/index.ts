@@ -55,6 +55,9 @@ export { AssetLoader } from "./assets/AssetLoader";
 export { AnimationController } from "./animation/AnimationController";
 export type { AnimationClips, PlayOptions } from "./animation/AnimationController";
 
+// Rendering
+export { RenderLayers } from "./rendering/RenderLayers";
+
 // Leveling
 export {
   LevelingSystem,

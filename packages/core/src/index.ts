@@ -48,6 +48,16 @@ export { invincibilitySystem } from "./ecs/systems/InvincibilitySystem";
 export { renderSystem } from "./ecs/systems/RenderSystem";
 export type { CameraPosition } from "./ecs/systems/RenderSystem";
 
+// Assets
+export { AssetLoader } from "./assets/AssetLoader";
+
+// Animation
+export { AnimationController } from "./animation/AnimationController";
+export type { AnimationClips, PlayOptions } from "./animation/AnimationController";
+
+// Rendering
+export { RenderLayers } from "./rendering/RenderLayers";
+
 // Leveling
 export {
   LevelingSystem,

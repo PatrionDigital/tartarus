@@ -1,7 +1,7 @@
 {
-  "name": "@tartarus/combat",
+  "name": "@tartarus/tilemap",
   "version": "0.1.0",
-  "description": "Combat systems: weapons, projectiles, collision detection",
+  "description": "Tile-map schema and runtime renderer (@pixi/tilemap) for Tartarus",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -19,13 +19,12 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@tartarus/core": "workspace:*",
+    "@pixi/tilemap": "^5.0.2",
     "pixi.js": "^8.7.0"
   },
   "devDependencies": {
     "typescript": "^5.7.3",
     "vitest": "^2.1.0",
-    "happy-dom": "^20.4.0",
-    "yuka": "^0.7.8"
+    "happy-dom": "^20.4.0"
   }
 }

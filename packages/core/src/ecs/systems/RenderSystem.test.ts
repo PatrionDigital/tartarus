@@ -272,4 +272,21 @@ describe("RenderSystem", () => {
       expect(graphics.y).toBe(500.75); // 300 + 200.75
     });
   });
+
+  describe("Non-Graphics display objects", () => {
+    it("should position-sync a Sprite-like display object", () => {
+      const world = createGameWorld();
+      // An AnimatedSprite/Sprite is, structurally, a Container with x/y.
+      const animatedSpriteLike = { x: 0, y: 0, alpha: 1 } as unknown as import("pixi.js").Container;
+      world.add({
+        position: { x: 100, y: 50 },
+        sprite: { graphics: animatedSpriteLike },
+      });
+
+      renderSystem(world, defaultCamera, defaultScreen.width, defaultScreen.height);
+
+      expect(animatedSpriteLike.x).toBe(500); // 400 + 100
+      expect(animatedSpriteLike.y).toBe(350); // 300 + 50
+    });
+  });
 });

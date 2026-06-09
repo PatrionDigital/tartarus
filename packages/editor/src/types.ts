@@ -1,86 +1,25 @@
 /**
- * @tartarus/editor — Type definitions for the tile map level editor.
+ * @tartarus/editor — type definitions.
  *
- * These types are also exported for runtime use by the engine.
+ * The tile-map schema lives in @tartarus/tilemap (single source of truth) and
+ * is re-exported here for backward compatibility. Editor-only UI types remain
+ * defined locally.
  */
 
-// ---------------------------------------------------------------------------
-// Tile Map
-// ---------------------------------------------------------------------------
+// ── Re-exported schema (single source of truth: @tartarus/tilemap) ──
+export type {
+  TileMap,
+  TileLayer,
+  SpriteSheetConfig,
+  TileProperty,
+  TilePropertyMap,
+  CollisionType,
+  SpecialFlag,
+  TileCoord,
+} from "@tartarus/tilemap";
+export { COLLISION_TYPES, SPECIAL_FLAGS, DEFAULT_LAYER_NAMES } from "@tartarus/tilemap";
 
-export interface TileMap {
-  name: string;
-  width: number; // tiles
-  height: number; // tiles
-  tileSize: number; // pixels
-  layers: TileLayer[];
-  spriteSheet: SpriteSheetConfig;
-  properties: TilePropertyMap; // sparse — only tiles with special props
-}
-
-export interface SpriteSheetConfig {
-  src: string; // filename / path / data-url
-  tileWidth: number;
-  tileHeight: number;
-  columns: number;
-  rows: number;
-}
-
-// ---------------------------------------------------------------------------
-// Layers
-// ---------------------------------------------------------------------------
-
-export interface TileLayer {
-  id: number; // 0–15
-  name: string;
-  visible: boolean;
-  locked: boolean;
-  collisionMask: number; // u16 bitmask
-  data: number[]; // flat array, width*height, -1 = empty, else tile index
-}
-
-export const DEFAULT_LAYER_NAMES: Record<number, string> = {
-  0: "Ground",
-  1: "Walls",
-  2: "Objects",
-  3: "Decoration",
-};
-
-// ---------------------------------------------------------------------------
-// Tile Properties
-// ---------------------------------------------------------------------------
-
-export type CollisionType = "none" | "solid" | "trigger" | "platform";
-
-export const COLLISION_TYPES: CollisionType[] = [
-  "none",
-  "solid",
-  "trigger",
-  "platform",
-];
-
-export const SPECIAL_FLAGS = [
-  "player_spawn",
-  "enemy_spawn",
-  "poi",
-  "door",
-  "checkpoint",
-] as const;
-
-export type SpecialFlag = (typeof SPECIAL_FLAGS)[number];
-
-export interface TileProperty {
-  collision: CollisionType;
-  flags: string[];
-  metadata: Record<string, string>;
-}
-
-/** Properties keyed by "layerId:x:y" */
-export type TilePropertyMap = Record<string, TileProperty>;
-
-// ---------------------------------------------------------------------------
-// Editor-specific types
-// ---------------------------------------------------------------------------
+// ── Editor-only UI types ──
 
 export type EditorTool = "paint" | "select" | "erase" | "fill";
 
@@ -90,14 +29,8 @@ export interface MapViewport {
   zoom: number;
 }
 
-/** Coordinate of a tile on the grid */
-export interface TileCoord {
-  x: number;
-  y: number;
-}
-
 /** Snapshot for undo/redo */
 export interface HistoryEntry {
-  layers: TileLayer[];
-  properties: TilePropertyMap;
+  layers: import("@tartarus/tilemap").TileLayer[];
+  properties: import("@tartarus/tilemap").TilePropertyMap;
 }
